@@ -49,12 +49,17 @@ class RabbitMQ
      */
     public function __construct(array $config)
     {
+        if (!isset($config['vhost'])) {
+            $config['vhost'] = '/';
+        }
+        
         $this->table = new AMQPTable();
         $this->connection = new AMQPStreamConnection(
             $config['host'],
             $config['port'],
             $config['login'],
-            $config['password']
+            $config['password'],
+            $config['vhost']
         );
 
         $this->channel = $this->connection->channel();

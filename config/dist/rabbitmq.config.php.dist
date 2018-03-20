@@ -1,0 +1,13 @@
+<?php
+
+return [
+
+    'rabbitmq' => [
+        'host' => '',
+        'port' => 5672,
+        'login' => '',
+        'password' => '',
+        'vhost' => '/',
+    ],
+
+];
