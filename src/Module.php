@@ -2,8 +2,6 @@
 
 namespace RabbitMQModule;
 
-use Zend\ModuleManager\ModuleManagerInterface;
-use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\EventManager\EventInterface;
 
 class Module
