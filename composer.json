@@ -1,0 +1,44 @@
+{
+  "name": "marceltk/rabbitmq-module",
+  "type": "library",
+  "description": "Consumidor e Produtor de mensagens para Fila do RabbitMQ",
+  "keywords": [
+    "RabbitMQ",
+    "Mensageria"
+  ],
+  "license": "GPLv3",
+  "homepage": "https://www.rabbitmq.com/",
+  "authors": [
+    {
+      "name": "Marcel Silva",
+      "email": "phpmarcel@gmail.com",
+      "role": "Maintainer"
+    }
+  ],
+  "require": {
+    "php": "^5.3 || ^7.0",
+    "zendframework/zend-servicemanager-di": "^1.0",
+    "php-amqplib/php-amqplib": "2.7.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "extra": {
+    "zf": {
+      "module": "RabbitMQModule"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "RabbitMQModule\\": [
+        "src/",
+        "test/"
+      ]
+    }
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
