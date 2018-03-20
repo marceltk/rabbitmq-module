@@ -6,7 +6,7 @@
     "RabbitMQ",
     "Mensageria"
   ],
-  "license": "GPLv3",
+  "license": "MIT",
   "homepage": "https://www.rabbitmq.com/",
   "authors": [
     {
