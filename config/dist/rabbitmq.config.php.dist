@@ -8,6 +8,20 @@ return [
         'login' => '',
         'password' => '',
         'vhost' => '/',
+
+        'queues' => [
+            'QUEUE_NAME' => [
+                'properties' => [
+                    'x-max-priority' => ['I', 10],
+                ],
+                'consumer' => [
+
+                ],
+                'producer' => [
+
+                ],
+            ],
+        ],
     ],
 
 ];
