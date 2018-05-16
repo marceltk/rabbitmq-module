@@ -45,6 +45,11 @@ class RabbitMQ
     private $consumer;
 
     /**
+     * @var array
+     */
+    private $config;
+
+    /**
      * @param array $config
      */
     public function __construct(array $config)
@@ -52,7 +57,7 @@ class RabbitMQ
         if (!isset($config['vhost'])) {
             $config['vhost'] = '/';
         }
-        
+
         $this->table = new AMQPTable();
         $this->connection = new AMQPStreamConnection(
             $config['host'],
@@ -62,7 +67,13 @@ class RabbitMQ
             $config['vhost']
         );
 
+        $this->config = $config;
         $this->channel = $this->connection->channel();
+    }
+
+    public function getConfig()
+    {
+        return $this->config;
     }
 
     /**
